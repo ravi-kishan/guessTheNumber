@@ -1,6 +1,6 @@
 {
   "name": "@ravik1/guessthenumber",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0-development",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,9 +8,8 @@
     "build": "tsc",
     "commit": "git-cz",
     "test": "mocha -r ts-node/register src/**/*.test.ts --require esm",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release"
   },
-
   "files": [
     "lib/**/*"
   ],
