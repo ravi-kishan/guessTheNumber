@@ -46,7 +46,7 @@
     "url": "https://github.com/ravi-kishan/guessTheNumber.git"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "czConfig":{
     "path":"node_modules/cz-conventional-changelog"
