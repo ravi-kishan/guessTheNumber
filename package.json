@@ -4,10 +4,17 @@
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "nyc": {
+    "require": [
+      "esm"
+    ]
+  },
   "scripts": {
     "build": "tsc",
+    "check-coverage": "nyc check-coverage --statements 100 --branche 100 --functions 100 --lines 100",
     "commit": "git-cz",
     "test": "mocha -r ts-node/register src/**/*.test.ts --require esm",
+    "cover": "nyc npm t",
     "semantic-release": "semantic-release"
   },
   "files": [
@@ -40,6 +47,8 @@
     "cz-conventional-changelog": "^3.2.0",
     "esm": "^3.2.25",
     "ghooks": "^2.0.4",
+    "istanbul": "^0.4.5",
+    "nyc": "^15.1.0",
     "semantic-release": "^17.1.1",
     "typescript": "^3.7.3"
   },
@@ -55,7 +64,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit":"npm run test"
+      "pre-commit": "npm run test && npm run check-coverage"
     }
   }
 }

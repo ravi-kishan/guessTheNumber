@@ -13,13 +13,13 @@ emittor.on('guessed',function(){
 });
 
 function generateNum(number:number) {
-    return randomNum(number);
+    return 5;//randomNum(number);
 }
 
 var num = generateNum(100);
 console.log("The number is between 0 and 100. Guess it!");
 
-export function guessNum(myArg:number) {
+export function guessNum(myArg:number):string {
     var number ;// =(<number>(<unknown>(<HTMLInputElement> document.getElementById("fname")).value));
     if( number == null) {
         number = myArg;

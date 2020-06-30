@@ -8,11 +8,11 @@ describe('guessTheNumber test', () => {
    
     
  it('should return You Overshot!', () => {
-        var result = guessNum(101);
-        expect(result).to.equal("You Overshot!");
+    var result = guessNum(101);
+        expect(result).to.equal('You Overshot!');
     });
  it('should return You Undershot!', () => {
         var result = guessNum(-1);
-        expect(result).to.equal("You Undershot!");
+        expect(result).to.equal('You Undershot!');
     });
 });
