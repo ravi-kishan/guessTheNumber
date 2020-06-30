@@ -5,6 +5,8 @@ cache:
     - node_modules
 notifications:
   email: false
+node_js:
+  - "12.18.1"
 before_install:
   - npm install -g npm@latest
 before_script: 
