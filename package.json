@@ -8,7 +8,7 @@
     "build": "tsc",
     "commit": "git-cz",
     "test": "mocha -r ts-node/register src/**/*.test.ts --require esm",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
 
   "files": [
