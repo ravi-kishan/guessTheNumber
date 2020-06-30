@@ -1,12 +1,14 @@
 {
   "name": "@ravik1/guessthenumber",
-  "version": "2.0.24",
+  "version": "0.0.0-development",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "mocha -r ts-node/register src/**/*.test.ts --require esm"
+    "commit": "git-cz",
+    "test": "mocha -r ts-node/register src/**/*.test.ts --require esm",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "lib/**/*"
@@ -34,7 +36,20 @@
     "ts-node": "^8.10.2"
   },
   "devDependencies": {
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
     "esm": "^3.2.25",
+    "semantic-release": "^17.1.1",
     "typescript": "^3.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ravi-kishan/guessTheNumber.git"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "czConfig":{
+    "path":"node_modules/cz-conventional-changelog"
   }
 }
