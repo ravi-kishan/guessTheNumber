@@ -13,7 +13,7 @@
     "build": "tsc",
     "check-coverage": "nyc check-coverage --statements 100 --branche 100 --functions 100 --lines 100",
     "commit": "git-cz",
-    "test": "mocha -r ts-node/register src/**/*.test.ts --require esm",
+    "test": "_mocha -r ts-node/register src/**/*.test.ts --require esm",
     "cover": "nyc npm t",
     "semantic-release": "semantic-release"
   },
