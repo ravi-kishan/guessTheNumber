@@ -4,11 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "nyc": {
-    "require": [
-      "esm"
-    ]
-  },
+ 
   "scripts": {
     "build": "tsc",
     "check-coverage": "nyc check-coverage --statements 60 --branche 60 --functions 60 --lines 60",
