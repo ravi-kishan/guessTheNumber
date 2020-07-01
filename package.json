@@ -11,10 +11,11 @@
   },
   "scripts": {
     "build": "tsc",
-    "check-coverage": "nyc check-coverage --statements 100 --branche 100 --functions 100 --lines 100",
+    "check-coverage": "nyc check-coverage --statements 60 --branche 60 --functions 60 --lines 60",
+    "report-coverage":"cat ./coverage/lcov.info | codecov",
     "commit": "git-cz",
     "test": "_mocha -r ts-node/register src/**/*.test.ts --require esm",
-    "cover": "nyc npm t",
+    "cover": "nyc --reporter=lcov npm t",
     "semantic-release": "semantic-release"
   },
   "files": [
@@ -43,6 +44,7 @@
     "ts-node": "^8.10.2"
   },
   "devDependencies": {
+    "codecov.io": "^0.1.6",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
     "esm": "^3.2.25",
