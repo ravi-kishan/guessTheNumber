@@ -2,7 +2,7 @@ import { randomNum } from "./math";
 import { EventEmitter } from "events";
 import * as $  from "jquery";
 
-var min = 0;
+var min =  0;
 var max= 100;
 
 var hint = "The number is between " + min + " and " + max + "."; 
