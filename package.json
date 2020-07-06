@@ -2,6 +2,7 @@
   "name": "@ravik1/guessthenumber",
   "version": "0.0.0-development",
   "description": "",
+  
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
  
