@@ -2,18 +2,15 @@
   "name": "@ravik1/guessthenumber",
   "version": "0.0.0-development",
   "description": "",
-
-  
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
- 
   "scripts": {
-    "build": "tsc",
-    "check-coverage": "nyc check-coverage --statements 60 --branche 60 --functions 60 --lines 60",
+    "build": "tsc ",
+    "check-coverage": "nyc check-coverage --statements 10 --branche 10 --functions 10 --lines 10",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "commit": "git-cz",
-    "test": "_mocha -r ts-node/register src/**/*.test.ts --require esm",
-    "cover": "nyc --reporter=lcov npm t",
+    "test": "mocha -r ts-node/register src/**/*.test.ts --require esm",
+    "cover": "nyc -- mocha -r ts-node/register src/**/*.test.ts --require esm  ",
     "semantic-release": "semantic-release"
   },
   "files": [
@@ -24,6 +21,7 @@
   "dependencies": {
     "@babel/core": "^7.10.3",
     "@babel/register": "^7.10.3",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/chai": "^4.2.11",
     "@types/events": "^3.0.0",
     "@types/jquery": "^3.3.38",
@@ -50,6 +48,7 @@
     "istanbul": "^0.4.5",
     "nyc": "^15.1.0",
     "semantic-release": "^17.1.1",
+    "sonarqube-scanner": "^2.7.0",
     "typescript": "^3.7.3"
   },
   "repository": {
@@ -66,5 +65,13 @@
     "ghooks": {
       "pre-commit": "npm run cover && npm run check-coverage"
     }
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "all": true,
+    "reporter": [
+      "text",
+      "lcov"
+    ]
   }
 }

@@ -49,6 +49,12 @@ export function guessNum(myArg:number):string {
     return message;
 }
 
+function guessNu(arg:number){
+    guessNum(arg)
+}
+
+
+
 // $(document).ready(function(){
 //     $('#hint').text(hint);
 //   });
