@@ -2,7 +2,7 @@ sudo: false
 language: node_js
 addons:
   sonarcloud:
-    organization: "ravi-kishan"
+    organization: "raviorg"
     token: 
       secure: 4260434368463156aa6d9669e45f441e111e8c75
 cache:
