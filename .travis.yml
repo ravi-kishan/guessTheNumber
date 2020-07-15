@@ -4,7 +4,7 @@ addons:
   sonarcloud:
     organization: "ravi-kishan"
     token: 
-      secure: "AX6IwnuKNTiiSg6gM0XLt4XIoOsDixNwq39+xmUQ/PkVyNtNggnxYkY4f5LOPfchm22brR+dQey1P4O1C/joZXng8uG8pv6Bh972RT6qW6aFoDy/d/f0aMtuK+b2zvXCKqkotP3CryAL7fATowfh8wb+EaU+uUWblDfCWFgH0/DoAyqZy3CNLgkPdt4hzuwufi/8Dw8fzucOuihDFRNAPtjHn5gARI5SiZ8VMnSqayApgwJscuIX3RZgWo2z23NwndNwakNRRFNbkwU9Jsp7mpHGPsDfIf2znmT3d7oAkWoTzplPKWQWSEVdki2gl7n5p125uR4pAzOaQd3sCNLhYROFDT0e7t2uGjyM6DPwXcoXNB8s1VMNAEX1TOqREmzCasu7uQJ5B+PTRHQZZpOjQ8ZewKeAaSc3G0EKgTP5VfsU3M5b7UG6qp3k6+9Z7uibznIDtTxk7uEdlWW9HogsSy4QDN61mf5omaFS3zJMoIdhbDNVgHxTxv34mIpNKrzkjTDRSNdznt4Pq2EnXJnbfQDoBB9LnguHAlKvextMx1bhQMwye3/dF8G1mU/sUgeFzQ/W0pvQEYKdAgxBbLKH8rabyWaQY4Ed9/1gIAQV/jbZF1LD3Pf/25rvm8HuoWXh82aqszqIfCQVXon8r32mebyxKDBfUIB92V76CYN5GIQ="
+      secure: 4260434368463156aa6d9669e45f441e111e8c75
 cache:
   directories:
     - node_modules
