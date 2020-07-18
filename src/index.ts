@@ -1,6 +1,6 @@
 import { randomNum } from "./math";
 import { EventEmitter } from "events";
-import * as $  from "jquery";
+import  $  from "jquery";
 
 var min =  0;
 var max= 100;
@@ -9,18 +9,18 @@ var hint = "The number is between " + min + " and " + max + ".";
 const emittor = new EventEmitter();
 var message = "";
 emittor.on('guessed',function(){
-   // alert(message);
+    console.log(message)
 });
 
 function generateNum(number:number) {
-    return 5;//randomNum(number);
+    return randomNum(number);
 }
 
 var num = generateNum(100);
 console.log("The number is between 0 and 100. Guess it!");
 
 export function guessNum(myArg:number):string {
-    var number ;// =(<number>(<unknown>(<HTMLInputElement> document.getElementById("fname")).value));
+    var number =(<number>(<unknown>(<HTMLInputElement> document.getElementById("fname")).value));
     if( number == null) {
         number = myArg;
     }
@@ -43,18 +43,12 @@ export function guessNum(myArg:number):string {
     }
     emittor.emit('guessed');
     hint = "The number is between " + min + " and " + max + "."; 
-    // $(document).ready(function(){
-    //     $('#hint').text(hint);
-    //   });
+    $(document).ready(function(){
+        $('#hint').text(hint);
+      });
     return message;
 }
 
-function guessNu(arg:number){
-    guessNum(arg)
-}
-
-
-
-// $(document).ready(function(){
-//     $('#hint').text(hint);
-//   });
+$(document).ready(function(){
+    $('#hint').text(hint);
+  });

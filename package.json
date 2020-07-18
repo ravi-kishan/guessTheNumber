@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc ",
+    "build": "tsc -p tsconfig.build.json",
     "check-coverage": "nyc check-coverage --statements 10 --branche 10 --functions 10 --lines 10",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "commit": "git-cz",
@@ -19,9 +19,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/register": "^7.10.3",
-    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/chai": "^4.2.11",
     "@types/events": "^3.0.0",
     "@types/jquery": "^3.3.38",
@@ -36,19 +33,23 @@
     "jsdom": "^16.2.2",
     "jsdom-global": "^3.0.2",
     "mocha": "^8.0.1",
-    "mocha-jsdom": "^2.0.0",
-    "ts-node": "^8.10.2"
+    "mocha-jsdom": "^2.0.0"
   },
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/lodash-es": "^4.17.3",
     "codecov.io": "^0.1.6",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
     "esm": "^3.2.25",
     "ghooks": "^2.0.4",
     "istanbul": "^0.4.5",
+    "lodash-es": "^4.17.15",
     "nyc": "^15.1.0",
     "semantic-release": "^17.1.1",
     "sonarqube-scanner": "^2.7.0",
+    "source-map-support": "^0.5.19",
+    "ts-node": "^8.10.2",
     "typescript": "^3.7.3"
   },
   "repository": {
@@ -65,13 +66,5 @@
     "ghooks": {
       "pre-commit": "npm run cover && npm run check-coverage"
     }
-  },
-  "nyc": {
-    "extends": "@istanbuljs/nyc-config-typescript",
-    "all": true,
-    "reporter": [
-      "text",
-      "lcov"
-    ]
   }
 }
