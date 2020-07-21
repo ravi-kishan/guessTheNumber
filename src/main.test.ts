@@ -9,6 +9,7 @@ global.document = dom.window.document;
 
 import   { guessNum }   from "./index";
 
+
 describe('guessTheNumber test', () => {
    
     
