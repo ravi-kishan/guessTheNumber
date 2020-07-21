@@ -13,7 +13,7 @@ emittor.on('guessed',function(){
 });
 
 function generateNum(number:number) {
-    return randomNum(number);
+    return 5;//randomNum(number);
 }
 
 var num = generateNum(100);
