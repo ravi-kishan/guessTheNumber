@@ -2,8 +2,13 @@ import { randomNum } from "./math";
 import { EventEmitter } from "events";
 import  $  from "jquery";
 
+
 var min =  0;
 var max= 100;
+
+
+
+
 
 var hint = "The number is between " + min + " and " + max + "."; 
 const emittor = new EventEmitter();
@@ -13,14 +18,31 @@ emittor.on('guessed',function(){
 });
 
 function generateNum(number:number) {
-    return 5;//randomNum(number);
+    return randomNum(number);
 }
+
+var para = document.createElement("P");               
+para.innerText = "The number is between 0 and 100. Guess it!";    
+
+document.body.appendChild(para);  
+
+var inpt = document.createElement("INPUT");
+inpt.setAttribute("type", "text");
+inpt.setAttribute("id", "guessedValue");
+document.body.appendChild(inpt);
+
+var show = document.createElement("P"); 
+document.body.appendChild(show);  
+
 
 var num = generateNum(100);
 console.log("The number is between 0 and 100. Guess it!");
 
-export function guessNum(myArg:number):string {
-    var number =(<number>(<unknown>(<HTMLInputElement> document.getElementById("fname")).value));
+var btn = document.createElement("BUTTON");   
+btn.innerHTML = "GUESS"; 
+
+ export function guessNum(myArg:number) {
+    var number;
     if( number == null) {
         number = myArg;
     }
@@ -49,6 +71,32 @@ export function guessNum(myArg:number):string {
     return message;
 }
 
-$(document).ready(function(){
-    $('#hint').text(hint);
-  });
+
+btn.onclick = function() {
+    var number = <number><unknown>(<HTMLInputElement>document.getElementById("guessedValue")).value;
+    
+    if( number == num){
+        message = "Congrats! You won";
+        max = number;
+        min = number;
+        console.log(message);
+    }
+    else if ( number < num )
+    {
+        message = "You Undershot!";
+        min = number  + 1;
+        console.log(message);
+    }
+    else {
+        message = "You Overshot!";
+        max = number - 1;
+        console.log(message);
+    }
+    emittor.emit('guessed');
+    hint = "The number is between " + min + " and " + max + "."; 
+    $(document).ready(function(){
+        $('#hint').text(hint);
+      });
+      show.innerText = message;   
+}
+

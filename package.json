@@ -38,6 +38,8 @@
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/lodash-es": "^4.17.3",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
     "codecov.io": "^0.1.6",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
@@ -46,6 +48,8 @@
     "istanbul": "^0.4.5",
     "lodash-es": "^4.17.15",
     "nyc": "^15.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "semantic-release": "^17.1.1",
     "sonarqube-scanner": "^2.7.0",
     "source-map-support": "^0.5.19",
