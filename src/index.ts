@@ -31,6 +31,10 @@ inpt.setAttribute("type", "text");
 inpt.setAttribute("id", "guessedValue");
 document.body.appendChild(inpt);
 
+var btn = document.createElement("BUTTON");   
+btn.innerHTML = "GUESS"; 
+document.body.appendChild(btn);  
+
 var show = document.createElement("P"); 
 document.body.appendChild(show);  
 
@@ -38,9 +42,7 @@ document.body.appendChild(show);
 var num = generateNum(100);
 console.log("The number is between 0 and 100. Guess it!");
 
-var btn = document.createElement("BUTTON");   
-btn.innerHTML = "GUESS"; 
-document.body.appendChild(btn);  
+
 
 
  export function guessNum(myArg:number) {
