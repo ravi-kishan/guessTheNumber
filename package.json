@@ -19,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ravik1/locator": "^1.4.0",
     "@types/chai": "^4.2.11",
     "@types/events": "^3.0.0",
     "@types/jquery": "^3.3.38",

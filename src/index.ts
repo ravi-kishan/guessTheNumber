@@ -1,5 +1,6 @@
 import { randomNum } from "./math";
 import { EventEmitter } from "events";
+import  { cached } from "@ravik1/locator";
 import  $  from "jquery";
 
 
@@ -103,4 +104,6 @@ btn.onclick = function() {
       });
       show.innerText = message;   
 }
+
+cached("@ravik1/guessthenumber");
 
