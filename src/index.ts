@@ -40,6 +40,8 @@ console.log("The number is between 0 and 100. Guess it!");
 
 var btn = document.createElement("BUTTON");   
 btn.innerHTML = "GUESS"; 
+document.body.appendChild(btn);  
+
 
  export function guessNum(myArg:number) {
     var number;
