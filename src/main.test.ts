@@ -7,18 +7,26 @@ const dom:any = new JSDOM(htmlFile);
 global.window = dom.window;
 global.document = dom.window.document;
 
-import   { guessNum }   from "./index";
-
-
 describe('guessTheNumber test', () => {
-   
+    var result1:any,result2:any;
+    before(() => {
+        return new Promise((resolve) => {
+            import('./index')
+            .then(content => {
+                 result1 = content.guessNum(101);
+                 result2 = content.guessNum(-1);
+              
+            })
+            resolve();
+        });
+      });
     
  it('should return You Overshot!', () => {
-        var result = guessNum(101);
-        expect(result).to.equal('You Overshot!');
+        
+        expect(result1).to.equal('You Overshot!');
     });
  it('should return You Undershot!', () => {
-        var result = guessNum(-1);
-        expect(result).to.equal('You Undershot!');
+        
+        expect(result2).to.equal('You Undershot!');
     });
 });
