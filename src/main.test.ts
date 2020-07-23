@@ -2,8 +2,7 @@ import { expect } from "chai";
 import * as fs from 'fs';
 import * as path from 'path';
 import { JSDOM } from "jsdom";
-const htmlFile:any = fs.readFileSync(path.resolve(__dirname, 'index.html')).toString('utf8')
-const dom:any = new JSDOM(htmlFile);
+const dom:any = new JSDOM("<!DOCTYPE html><html><head></head><body></body></html>");
 global.window = dom.window;
 global.document = dom.window.document;
 
