@@ -14,9 +14,9 @@ describe('guessTheNumber test', () => {
             .then(content => {
                  result1 = content.guessNum(101);
                  result2 = content.guessNum(-1);
-              
+                 resolve();
             })
-            resolve();
+           
         });
       });
     
